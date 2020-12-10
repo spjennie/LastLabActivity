@@ -9,8 +9,9 @@ The code that I chose to revise reads sequences & prints their averages from the
 In my original code, I calculated the numbers in the while loop in the main class. For my revision, I made a separate method called average, outside of the main class, so I am able to call that method when needed in the main class.
 
 original code:
-'''
+
 //finding the average 
+'''java
 int sum = 0;
 for(int i = 0; i < theRest.length; i++)
   sum+= theRest[i];
