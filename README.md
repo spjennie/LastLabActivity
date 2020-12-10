@@ -10,13 +10,14 @@ In my original code, I calculated the numbers in the while loop in the main clas
 
 original code:
 
-//finding the average 
-'''java
+```java
+//finding the average
 int sum = 0;
 for(int i = 0; i < theRest.length; i++)
   sum+= theRest[i];
 double average = (double) sum / header; 
-'''     
+```  
+
 revised code:
 
 //method the calculate average
