@@ -13,6 +13,18 @@ import java.util.Scanner;
  */
 public class Averages 
 {
+	static int sum;
+	
+	//method to calculate average
+	static double average(int[] array)
+	{
+		sum = 0;
+		for(int i = 0; i < array.length; i++)
+			sum+= array[i];
+		
+		return (double) sum / array.length;
+	}
+	
 	public static void main(String[] args) throws Exception
 	{
 		//create a Scanner object & pass the numbers.text as a parameter 
@@ -24,30 +36,32 @@ public class Averages
 		//keep looping while number.text has a next Integer 
 		while(scanner.hasNextInt())
 		{
-			//create an int variable that stores the header of each line 
-			int header = scanner.nextInt();
-
-			//create an array with the same length as the variable header 
-			int[] theRest = new int[header];
+			//create an array with the same length as the first number of each line
+			int[] numbers = new int[scanner.nextInt()];
 
 			//put the rest of the sequence in the array 
-			for(int i = 0; i < header; i++)
-				theRest[i] = scanner.nextInt();
+			for(int i = 0; i < numbers.length; i++)
+				numbers[i] = scanner.nextInt();
 
-			//finding the average 
-			int sum = 0;
-			for(int i = 0; i < theRest.length; i++)
-				sum+= theRest[i];
-			double average = (double) sum / header; 
+			//find the average 
+			double average = average(numbers);
 
 			//find the toString of the sequence, not including the header 
-			String numbers = "";
-			for(int i = 0; i < theRest.length; i++)
-				numbers += theRest[i] + " ";
+			String values = "";
+			for(int i = 0; i < numbers.length; i++)
+				values += numbers[i] + " ";
 
 			//output the sequence & average 
-			System.out.println("The average of the " + header + " integers " + numbers + 
-					"is " + average);
+			if(numbers.length > 1)
+			{
+				System.out.println("The average of the " + numbers.length + " integers " + values + 
+						"is " + average);
+			}
+			else
+			{
+				System.out.println("There is only " + numbers.length + " integer, " + values + "so the average"
+						+ " is " + average);
+			}
 			
 			//increment counter 
 			counter++;
