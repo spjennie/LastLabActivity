@@ -103,5 +103,6 @@ else
   System.out.println("There is only " + numbers.length + " integer, " + values + "so the average"
 						+ " is " + average);
 }
-      
+ 
+# Conclusion
 As I looked back at the code that I had originally wrote, I realized that I have learned new methods from the time that I had created the code to now. It was also helpful to look back at previous code because it felt like I was looking at my code for the first time, so I was able to pick out things to change more easily. Through the lab I realize how much I am constantly learning and that it is a good idea to look at previous code after some time to find ways to improve it.
