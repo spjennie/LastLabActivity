@@ -33,7 +33,7 @@ static double average(int[] array)
 ```
  
  in the main class:
- ```
+ ```java
 //find the average 
 double average = average(numbers);
 ```
